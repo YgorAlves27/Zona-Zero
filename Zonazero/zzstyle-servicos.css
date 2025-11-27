@@ -1,0 +1,153 @@
+
+/* ---------------------------------------------
+   CONTEÚDO PRINCIPAL
+-------------------------------------------------*/
+.conteudo-servico {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.conteudo-servico h2 {
+    font-size: 3.2rem;
+    color: var(--color);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+    display: inline-block;
+}
+
+.conteudo-servico p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #0a0a0a;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para imagens  */
+.conteudo-servico img {
+    display: block;  /* Torna a imagem um bloco para centralização */
+    margin: 1rem auto;  /* Centraliza horizontalmente (margem automática nas laterais) */
+    max-width: 100%;  /* Responsiva: nunca ultrapassa a largura do container */
+    width: auto;  /* Largura automática baseada na proporção original (evita distorção) */
+    height: auto;  /* Altura automática para manter proporção (remove o 70% fixo que distorcia) */
+    border-radius: 8px;  /* Bordas arredondadas para elegância */
+    box-shadow: 0 4px 8px rgba(54, 82, 160, 0.2);  /* Sombra azul para tema frio */
+    transition: transform 0.3s ease;  /* Animação suave ao passar mouse */
+}
+/* Hover para interatividade */
+.conteudo-servico img:hover {
+    transform: scale(1.03);  /* Leve zoom */
+}
+/* Responsividade: ajustes para telas menores */
+@media (max-width: 768px) {
+.conteudo-servico img {
+        width: 100%;  /* Ocupa toda a largura em tablets */
+        margin: 1rem 0;  /* Remove margem lateral para centralização em bloco */
+    }
+}
+@media (max-width: 480px) {
+.conteudo-servico  img {
+        width: 100%;  /* Ocupa toda a largura em celulares */
+        margin: 1rem 0;  /* Centralizada verticalmente com texto */
+    }
+}
+/* ---------------------------------------------
+   LISTAS
+-------------------------------------------------*/
+
+.lista-servico ul {
+    list-style: none;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding-left: 1rem;
+}
+
+.lista-servico li {
+    margin-bottom: 1.2rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.lista-servico li::before {
+    content: "•";
+    color: var(--color);
+    margin-right: 10px;
+    font-size: 2.5rem;
+    line-height: 1rem;
+}
+
+.lista-servico li strong {
+         font-weight: 700;  /* Negrito forte */
+         color: var(--color);  /* Azul do tema */
+         font-family: "Roboto", sans-serif;  /* Padrão de fonte */
+     }
+
+
+
+/* ---------------------------------------------
+   SEÇÃO – CHAMADA PARA AGENDAMENTO
+-------------------------------------------------*/
+
+.chamada-agendamento {
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-top: 4rem;
+    background: linear-gradient(to right, #3652a0, rgb(241, 55, 55));
+    color: white;
+    border-radius: 8px;
+}
+
+.chamada-agendamento h2 {
+    color: white;
+    border: none;
+    font-size: 3.5rem;
+}
+
+.chamada-agendamento p {
+    font-size: 1.9rem;
+    margin: 1rem 0 2rem;
+}
+
+.btn-agendar {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    border-radius: 6px;
+}
+
+.btn-agendar:hover {
+    background-color: white;
+    color: black;
+    letter-spacing: 0.1rem;
+}
+
+/* ---------------------------------------------
+   RESPONSIVIDADE
+-------------------------------------------------*/
+
+@media (max-width: 768px) {
+    .banner-texto h1 {
+        font-size: 4rem;
+    }
+
+    .banner-texto p {
+        font-size: 1.6rem;
+    }
+
+    .conteudo-servico h2 {
+        font-size: 2.6rem;
+    }
+
+    .conteudo-servico p {
+        font-size: 1.6rem;
+    }
+
+    .beneficios-servico ul {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,708 @@
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --color: rgb(54, 82, 160);
+    --border: 0.1rem solid rgb(104, 104, 104);
+    font-size: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: white
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+    background-color: var(--bg-color);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.logo {
+
+    margin-right: auto;
+    margin: 0 0;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    flex: 1;
+    justify-content: center;
+}
+
+.barra a {
+    margin: 0 2rem;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.barra a:hover {
+    color: var(--color);
+    border-bottom: 0.1rem solid var(--color);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(14, 12, 12);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 175px;
+    box-shadow: 0 4px 8px rgba(212, 212, 212, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 15px;
+    color: #c4c4c4;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #3b3b3b;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+}
+
+.btn {
+    background: var(--color);
+    color: white;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: rgb(241, 55, 55);
+    letter-spacing: 0.09rem;
+}
+
+.home-space {
+    background: url("./img/zzbanner.png");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-space section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: white;
+    font-size: 6rem;
+}
+
+.content p {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-optical-sizing: auto;
+    background-color: #0000008c;
+    padding: 1rem 3rem;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-top: 4rem;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+}
+
+
+.title span {
+    color: var(--color);
+    text-transform: uppercase;
+}
+
+.title span:hover {
+    color: rgb(241, 55, 55);
+}
+
+.about .rol {
+    display: flex;
+    align-items: center;
+    background-color: rgb(12, 10, 49);
+    gap: 1.5rem;
+}
+
+.about .rol .content {
+    padding: 2rem;
+}
+
+.about .rol .content h3 {
+    font-size: 3rem;
+    color: white;
+
+}
+
+.about .rol .content p {
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 1.8;
+    background-color: rgba(12, 10, 49, 0.808);
+
+}
+
+.about .rol img {
+    height: 80vh;
+}
+
+.about .rol img:hover {
+    height: 80.8vh;
+}
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .services-container .box {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 5rem;
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+}
+
+.services .services-container .box:hover {
+    background-color: rgba(38, 96, 255, 0.24);
+
+}
+
+.services .services-container .box h3 {
+    color: var(--color);
+    font-size: 3rem;
+    padding: 1rem 0;
+
+}
+
+.services .services-container .box p {
+    font-size: 1.5rem;
+}
+
+.conhecer .serv-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+}
+
+.conhecer .serv-container .boxx {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 5rem;
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+    cursor: pointer;
+}
+
+.conhecer .serv-container .boxx:hover {
+    background: linear-gradient(to right, rgba(198, 213, 255, 0.349), rgba(255, 189, 189, 0.329));
+
+}
+
+.conhecer .serv-container .boxx img {
+    height: 30rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+}
+
+.conhecer .serv-container .boxx img:hover {
+    height: 31rem;
+    border-radius: 50%;
+}
+
+.conhecer .serv-container .boxx p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: rgb(6, 0, 63);
+}
+
+.conhecer .serv-container .boxx .crio {
+    color: rgb(70, 121, 233);
+    font-size: 3rem;
+    border: 2px solid rgb(70, 121, 233);
+}
+
+.conhecer .serv-container .boxx .sauna {
+    color: rgb(241, 55, 55);
+    font-size: 3rem;
+    border: 2px solid rgb(241, 55, 55);
+}
+
+.conhecer .serv-container .boxx .bota {
+    color: rgb(43, 146, 206);
+    font-size: 3rem;
+    border: 2px solid rgb(43, 146, 206);
+}
+
+.conhecer .serv-container .boxx .resp {
+    color: rgb(17, 207, 119);
+    font-size: 3rem;
+    border: 2px solid rgb(17, 207, 119);
+}
+
+.footer {
+    background-color: black;
+    color: #fff;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    flex: 1;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.footer-contatos {
+    flex: 1;
+    min-width: 250px;
+
+    margin-top: 25px;
+
+}
+
+.icon-contatos-container {
+    display: flex;
+
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-content .address iframe {
+    height: 30rem;
+}
+
+/*Colocar só a primeira letra do conteúdo maiúscula*/
+.conteudo-servico {
+    text-transform: uppercase;
+    text-align: flex;
+    align-items: center;
+}
+
+/*----------------------sobre-------------------*/
+
+.about-space section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 15rem;
+    background: url("img/zzbanner.png") no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 5rem;
+
+
+}
+
+.about-content {
+    max-width: 80rem;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+}
+
+.about-content h3 {
+    font-size: 3.2rem;
+    color: var(--color);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+    padding-bottom: 0.5rem;
+
+}
+
+
+.about-content p {
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+/*----------------------slider-------------------*/
+.slideshow {
+    position: relative;
+    width: 800px; /* Ajuste o tamanho conforme necessário */
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.titulo-slider {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--color);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, var(--color), rgb(241, 55, 55)) 1;
+    padding-bottom: 0.5rem;
+}
+
+
+/* -.-.-.-.-.-.-.-.-.-.-.-Responsividade-.-.-.-.-.-.-.-.-.-.-.-*/
+
+/* Para tablets e telas menores (até 768px) */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .header section {
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .barra {
+        margin: 1rem 0;
+    }
+
+    .barra a {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .submenu {
+        min-width: 150px;
+    }
+
+    .home-space {
+        height: 70vh;
+    }
+
+    .content h3 {
+        font-size: 4rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .about .rol {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about .rol .content {
+        padding: 1rem;
+    }
+
+    .about .rol .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about .rol .content p {
+        font-size: 1.4rem;
+    }
+
+    .about .rol img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .services .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .services .services-container .box {
+        margin-top: 3rem;
+        padding: 3rem;
+    }
+
+    .services .services-container .box h3 {
+        font-size: 2.5rem;
+    }
+
+    .services .services-container .box p {
+        font-size: 1.3rem;
+    }
+
+    .conhecer .serv-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .conhecer .serv-container .boxx {
+        margin-top: 3rem;
+        padding: 3rem;
+    }
+
+    .conhecer .serv-container .boxx img {
+        height: 20rem;
+    }
+
+    .conhecer .serv-container .boxx img:hover {
+        height: 21rem;
+    }
+
+    .conhecer .serv-container .boxx p {
+        font-size: 1.5rem;
+    }
+
+    .conhecer .serv-container .boxx .crio,
+    .conhecer .serv-container .boxx .sauna,
+    .conhecer .serv-container .boxx .bota,
+    .conhecer .serv-container .boxx .resp {
+        font-size: 2.5rem;
+    }
+
+    .footer {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contatos {
+        margin-top: 1rem;
+    }
+
+    .icon-contatos-container {
+        justify-content: center;
+    }
+
+    .footer-content .address iframe {
+        height: 20rem;
+        width: 100%;
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    :root {
+        font-size: 8px;
+    }
+
+    section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .barra a {
+        font-size: 1.3rem;
+        margin: 0.3rem 0;
+    }
+
+    .home-space {
+        height: 60vh;
+    }
+
+    .content h3 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .about .rol .content h3 {
+        font-size: 2rem;
+    }
+
+    .about .rol .content p {
+        font-size: 1.2rem;
+    }
+
+    .about .rol img {
+        height: 40vh;
+    }
+
+    .services .services-container .box {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .services .services-container .box h3 {
+        font-size: 2rem;
+    }
+
+    .services .services-container .box p {
+        font-size: 1.2rem;
+    }
+
+    .conhecer .serv-container .boxx {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .conhecer .serv-container .boxx img {
+        height: 15rem;
+    }
+
+    .conhecer .serv-container .boxx img:hover {
+        height: 16rem;
+    }
+
+    .conhecer .serv-container .boxx p {
+        font-size: 1.3rem;
+    }
+
+    .conhecer .serv-container .boxx .crio,
+    .conhecer .serv-container .boxx .sauna,
+    .conhecer .serv-container .boxx .bota,
+    .conhecer .serv-container .boxx .resp {
+        font-size: 2rem;
+    }
+
+    .footer {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .footer-content .address iframe {
+        height: 15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-space section {
+        background-attachment: scroll;
+        /* Muda para scroll em mobile para evitar lag */
+    }
+}
